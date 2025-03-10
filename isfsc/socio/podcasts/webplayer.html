@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>podcasts de sociologie</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px;
+            text-transform: lowercase;
+            font-variant: small-caps;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 180px;
+            margin-bottom: 40px;
+        }
+        
+        .episodes {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .episode {
+            background-color: #111111;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #ffffff;
+            border: 1px solid #333333;
+            text-align: center;
+        }
+        
+        .episode:hover {
+            background-color: #222222;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+        }
+        
+        .episode-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .play-button {
+            background-color: #444444;
+            color: #ffffff;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: 120px;
+            justify-content: center;
+            font-variant: small-caps;
+        }
+        
+        .play-button:hover {
+            background-color: #666666;
+        }
+        
+        .play-icon {
+            width: 16px;
+            height: 16px;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <img src="https://content.stucom.tech/isfsc/comb1/socio/podcasts/logo-podcast.png" alt="logo podcast" class="logo">
+        
+        <div class="episodes">
+            <a href="https://content.stucom.tech/isfsc/comb1/socio/podcasts/1-introduction-le-regard-sociologique.mp3" class="episode">
+                <div class="episode-title">épisode un : le regard sociologique</div>
+                <button class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    écouter
+                </button>
+            </a>
+            
+            <a href="https://content.stucom.tech/isfsc/comb1/socio/podcasts/2-introduction-durkheim-et-les-causes-sociales-du-suicide.mp3" class="episode">
+                <div class="episode-title">épisode deux : durkheim et les causes sociales du suicide</div>
+                <button class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    écouter
+                </button>
+            </a>
+            
+            <a href="https://content.stucom.tech/isfsc/comb1/socio/podcasts/3-introduction-max-weber-et-le-capitalisme.mp3" class="episode">
+                <div class="episode-title">épisode trois : max weber et le capitalisme</div>
+                <button class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    écouter
+                </button>
+            </a>
+            
+            <a href="https://content.stucom.tech/isfsc/comb1/socio/podcasts/4-chapitre-1-structurations-modernes-et-traditionnelles.mp3" class="episode">
+                <div class="episode-title">épisode quatre : structurations modernes et traditionnelles</div>
+                <button class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    écouter
+                </button>
+            </a>
+            
+            <a href="https://content.stucom.tech/isfsc/comb1/socio/podcasts/5-chapitre-1-hypermodernite.mp3" class="episode">
+                <div class="episode-title">épisode cinq : hypermodernité</div>
+                <button class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    écouter
+                </button>
+            </a>
+            
+            <a href="https://content.stucom.tech/isfsc/comb1/socio/podcasts/6-chapitre-2-ordre-des-interactions-et-habitus.mp3" class="episode">
+                <div class="episode-title">épisode six : ordre des interactions et habitus</div>
+                <button class="play-button">
+                    <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    écouter
+                </button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

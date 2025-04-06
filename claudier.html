@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trzv</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://cdn.13v.be/favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #283c33;
+        }
+        #dvd-logo {
+            position: absolute;
+            width: 150px;
+            height: auto;
+            user-select: none;
+            filter: brightness(1.2);
+        }
+    </style>
+</head>
+<body>
+    <img src="https://trzcontent.ams3.digitaloceanspaces.com/website/images/logo.png" id="dvd-logo" alt="trzv logo">
+    <script>
+        const dvdLogo = document.getElementById('dvd-logo');
+        let x = Math.random() * (window.innerWidth - 150);
+        let y = Math.random() * (window.innerHeight - 100);
+        let dx = 2.5;
+        let dy = 2.5;
+        
+        // Attendre que l'image soit chargée
+        dvdLogo.onload = function() {
+            // Démarrer l'animation
+            requestAnimationFrame(moveLogo);
+        };
+        
+        // Couleurs pour les changements lors des rebonds
+        const colors = [
+            'hue-rotate(0deg)',
+            'hue-rotate(60deg)',
+            'hue-rotate(120deg)',
+            'hue-rotate(180deg)',
+            'hue-rotate(240deg)',
+            'hue-rotate(300deg)'
+        ];
+        let currentColor = 0;
+        
+        function moveLogo() {
+            // Gestion des rebonds sur les bords
+            if (x + dvdLogo.offsetWidth >= window.innerWidth || x <= 0) {
+                dx = -dx;
+                changeColor();
+            }
+            
+            if (y + dvdLogo.offsetHeight >= window.innerHeight || y <= 0) {
+                dy = -dy;
+                changeColor();
+            }
+            
+            // Mise à jour des positions
+            x += dx;
+            y += dy;
+            
+            // Application de la position au logo
+            dvdLogo.style.left = x + 'px';
+            dvdLogo.style.top = y + 'px';
+            
+            // Continuer l'animation
+            requestAnimationFrame(moveLogo);
+        }
+        
+        function changeColor() {
+            currentColor = (currentColor + 1) % colors.length;
+            dvdLogo.style.filter = colors[currentColor];
+        }
+        
+        // Gestion du redimensionnement de la fenêtre
+        window.addEventListener('resize', function() {
+            // Vérifier que le logo reste dans les limites
+            x = Math.min(x, window.innerWidth - dvdLogo.offsetWidth);
+            y = Math.min(y, window.innerHeight - dvdLogo.offsetHeight);
+        });
+    </script>
+</body>
+</html>
